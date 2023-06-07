@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../Styles/Home.css';
-import Typed from 'typed.js';
 import imgMen from '../Data/men.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
