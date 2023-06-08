@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import { fadeIn } from '../utils/motion';
+import { fadeIn, zoomIn } from '../utils/motion';
 
 
 
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
 
                 </div>
             </div>
-            <motion.div variants={fadeIn('left', 'tween', 0, 0.5)}
+            <motion.div className='imgStyle' variants={zoomIn(0, 1)}
                 initial="hidden"
                 whileInView="show" style={{pointerEvents: 'none'}}>
                 <img src={imgMen} alt="" className="men" />

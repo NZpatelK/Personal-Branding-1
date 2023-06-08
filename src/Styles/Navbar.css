@@ -12,11 +12,12 @@
     backdrop-filter: blur(20px);
     width: 100vw;
     height: 80px;
-    position: fixed !important;
+    position: fixed;
     color: #ffffff;
     z-index: 99;
     top: 0;
     left: 0;
+    transform: none !important;
 }
 
 .logo {
