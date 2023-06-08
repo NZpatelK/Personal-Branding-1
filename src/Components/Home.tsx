@@ -1,106 +1,70 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../Styles/Home.css';
 import imgMen from '../Data/men.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 import ScrollReveal from 'scrollreveal';
+import { Typewriter } from 'react-simple-typewriter';
+import { motion } from 'framer-motion';
+import { fadeIn, slideIn } from '../utils/motion';
 
 
 
 
 const Home: React.FC = () => {
 
-    const ref = useRef(null);
-    const [textIndex, setTextIndex] = useState(0);
-    const texts = ["Brand Strategist", "Copywriter", "Social Media Manager", "Brand Coach", "SEO Specialist"];
-
-
-   
-
-    useEffect(() => {
-        
-        // new Typed(ref.current, {
-        //     strings: ["Brand Strategist", "Copywriter", "Social Media Manager", "Brand Coach", "SEO Specialist"],
-        //     typeSpeed: 190,
-        //     backDelay: 1000,
-        //     backSpeed: 200,
-        //     cursorChar: '>', 
-        //     loop: true
-        // })
-
-        
-
-        ScrollReveal().reveal('.content-transtition', {
-            // Configuration options
-            duration: 1000, // Animation duration in milliseconds
-            distance: '200px', // Distance to translate the element
-            origin: 'left', // Animation starting point
-            easing: 'ease-in-out', // Easing function for the animation
-            reset: true
-            // More options...
-        });
-
-        const elements = ['.icon1', '.icon2', '.icon3'];
-
-        elements.forEach((element, index) => {
-            ScrollReveal().reveal(element, {
-                delay: index * 250 + 250,
-                duration: 500, // Animation duration in milliseconds
-                distance: '100px', // Distance to translate the element
-                origin: 'bottom', // Animation starting point
-                easing: 'ease-in-out', // Easing function for the animation
-                reset: true
-                // More options...
-            });
-        });
-
-        ScrollReveal().reveal('.menImg', {
-            duration: 1000, // Animation duration in milliseconds
-            distance: '300px',
-            origin: 'right',
-            easing: 'ease-in-out',
-            reset: true, // Reset styles after animation completes
-        });
-
-        const timer = setInterval(() => {
-            setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-          }, 2000);
-      
-          return () => {
-            clearInterval(timer);
-          };      
-
-    },[])
-
-
     return (
         <div className='section' id="home">
             <div className="content">
-                <div className='content-transtition'>
+                <motion.div
+                    variants={fadeIn('right', 'tween', 0, 0.5)}
+                    initial="hidden"
+                    whileInView="show">
                     <h3>Hey, I'm Karan Patel</h3>
-                    <h2>I am a <span ref={ref} id="text">{texts[textIndex]}</span></h2>
-                    <p>Welcome to Karan's Personal Branding Services.
-                        We specialize in helping individuals unlock their true potential and stand out from the crowd.
+                    <h2>I am a <span id="text">
+                        <Typewriter
+                            words={["Brand Strategist", "Copywriter", "Social Media Manager", "Brand Coach", "SEO Specialist"]}
+                            loop={true}
+                            cursor
+                            cursorStyle='|'
+                            typeSpeed={100}
+                            deleteSpeed={150}
+                            delaySpeed={1000}
+                        />
+                    </span></h2>
+                    <p>
+                        Welcome to Karan's Personal Branding Services.
+                        We specialise in helping individuals unlock their true potential and stand out from the crowd.
                         With our expertise in brand strategy, design, and online presence, we empower you to shape a compelling personal brand that resonates with your target audience.
                         Whether you're an entrepreneur, professional, or creative, our personalized approach and strategic insights will elevate your brand to new heights. Discover the power of personal branding and let us guide you on the path to success.
                     </p>
-                </div>
+                </motion.div>
                 <div className="soicalIcon">
 
-                    <div className='icon1'>
+                    <motion.div  variants={fadeIn('up', 'tween', 0.25, 0.5)}
+                    initial="hidden"
+                    whileInView="show">
                         <FontAwesomeIcon className='sIcon' icon={faFacebook} />
-                    </div>
-                    <div className='icon2'>
+                    </motion.div>
+                    <motion.div  variants={fadeIn('up', 'tween', 0.5, 0.5)}
+                    initial="hidden"
+                    whileInView="show">
                         <FontAwesomeIcon className='sIcon' icon={faInstagram} />
-                    </div>
-                    <div className='icon3'>
+                    </motion.div>
+                    <motion.div  variants={fadeIn('up', 'tween', 0.75, 0.5)}
+                    initial="hidden"
+                    whileInView="show">
                         <FontAwesomeIcon className='sIcon' icon={faLinkedin} />
-                    </div>
+                    </motion.div>
+
                 </div>
             </div>
-            <div className="menImg">
+            <motion.div variants={fadeIn('right', 'tween', 0, 0.5)}
+                initial="hidden"
+                whileInView="show">
                 <img src={imgMen} alt="" className="men" />
-            </div>
+            </motion.div>
         </div>
     );
 };

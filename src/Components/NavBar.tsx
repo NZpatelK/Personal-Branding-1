@@ -20,11 +20,11 @@ const NavBar: React.FC = () => {
 
     return (
         <nav className='NavBarItems'>
-            <h1 className={clicked ? "hidden" : "logo"}>
+            <h1 className= "logo">
                 Example Personal Branding
             </h1>
-            <div className='menu-icons' onClick={handleClick}>
-                <FontAwesomeIcon icon={clicked ? faTimes : faBars} />
+            <div className='menu-icons' onClick={handleClick} style={{position: 'fixed'}}>
+                <FontAwesomeIcon icon={faBars} />
             </div>
             <ul className={clicked ? "nav-menu active" : "nav-menu"}>
                 {MenuData.map((item: MenuItem, index: number) => {

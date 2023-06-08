@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-*{
+body {
     background-color: #000325;
 
 }
@@ -106,17 +106,17 @@
 }
 
 
-@media screen and (min-height: 1000px ) {
+@media screen and (min-height: 1000px) {
 
-    .content p{
+    .content p {
         font-size: 28px;
     }
 
-    .content h3{ 
+    .content h3 {
         font-size: 50px;
     }
 
-    .content h2{
+    .content h2 {
         font-size: 80px;
         padding: 0;
     }
@@ -124,20 +124,20 @@
     .soicalIcon .sIcon {
         font-size: 40px;
     }
-    
+
 }
 
-@media screen and (min-height: 1000px ) and (max-width: 1500px) {
+@media screen and (min-height: 1000px) and (max-width: 1500px) {
 
-    .content p{
+    .content p {
         font-size: 14px;
     }
 
-    .content h3{ 
+    .content h3 {
         font-size: 30px;
     }
 
-    .content h2{
+    .content h2 {
         font-size: 50px;
         padding: 0;
     }
@@ -147,74 +147,91 @@
         font-size: 20px;
         margin-right: 40px;
     }
-    
+
 }
 
 @media screen and (max-width: 1200px) {
 
     .section {
-        flex-direction: column; /* Change flex-direction to column */
-        justify-content: flex-start; /* Align items to the top */
+        flex-direction: column;
+        /* Change flex-direction to column */
+        justify-content: flex-start;
+        /* Align items to the top */
         height: auto;
-      }
-    
-      .content {
+    }
+
+    .content {
         position: relative;
         margin-top: 10%;
-        align-self: flex-start; /* Align content to the top */
-        padding-left: 50px; /* Adjust padding as needed */
-        width: 90%; /* Take up the full width */
-      }
-    
-      .men {
+        align-self: flex-start;
+        /* Align content to the top */
+        padding-left: 50px;
+        /* Adjust padding as needed */
+        width: 90%;
+        /* Take up the full width */
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .men {
         position: relative;
         top: 15%;
         max-width: auto;
         max-height: auto;
-        margin-top: 50px; /* Add margin to separate from .content */
-      } 
+        margin-top: 50px;
+        /* Add margin to separate from .content */
+    }
 }
 
 @media screen and (max-width: 700px) {
 
     .section {
-        flex-direction: column; /* Change flex-direction to column */
-        justify-content: flex-start; /* Align items to the top */
+        flex-direction: column;
+        /* Change flex-direction to column */
+        justify-content: flex-start;
+        /* Align items to the top */
         height: auto;
-      }
-    
-      .content {
+    }
+
+    .content {
         position: relative;
         top: 20%;
-        align-self: flex-start; /* Align content to the top */
-        padding-left: 20px; /* Adjust padding as needed */
-        width: 90%; /* Take up the full width */
-      }
-    
-      .men {
+        align-self: flex-start;
+        /* Align content to the top */
+        padding-left: 20px;
+        /* Adjust padding as needed */
+        width: 90%;
+        /* Take up the full width */
+    }
+
+
+    .men {
         position: relative;
         top: 10%;
         max-width: auto;
         max-height: auto;
-        margin-top: 50px; /* Add margin to separate from .content */
-      } 
+        margin-top: 50px;
+        /* Add margin to separate from .content */
+    }
 }
 
 @media screen and (max-width: 500px) {
 
-    .content{
+    .content {
         margin-top: 20%;
     }
 
-    .content p{
+    .content p {
         font-size: 12px;
     }
 
-    .content h3{ 
+    .content h3 {
         font-size: 20px;
     }
 
-    .content h2{
+    .content h2 {
         font-size: 28px;
         padding: 0;
     }
@@ -223,9 +240,5 @@
         display: none;
     }
 
-    
+
 }
-
-
-
-
