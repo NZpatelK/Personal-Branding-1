@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../Styles/Home.css';
 import imgMen from '../Data/men.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
-import ScrollReveal from 'scrollreveal';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import { fadeIn, slideIn } from '../utils/motion';
+import { fadeIn } from '../utils/motion';
 
 
 
@@ -60,9 +58,9 @@ const Home: React.FC = () => {
 
                 </div>
             </div>
-            <motion.div variants={fadeIn('right', 'tween', 0, 0.5)}
+            <motion.div variants={fadeIn('left', 'tween', 0, 0.5)}
                 initial="hidden"
-                whileInView="show">
+                whileInView="show" style={{pointerEvents: 'none'}}>
                 <img src={imgMen} alt="" className="men" />
             </motion.div>
         </div>

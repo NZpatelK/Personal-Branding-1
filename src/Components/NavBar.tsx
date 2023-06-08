@@ -24,7 +24,7 @@ const NavBar: React.FC = () => {
                 Example Personal Branding
             </h1>
             <div className='menu-icons' onClick={handleClick} style={{position: 'fixed'}}>
-                <FontAwesomeIcon icon={faBars} />
+                <FontAwesomeIcon icon={clicked ? faTimes : faBars} />
             </div>
             <ul className={clicked ? "nav-menu active" : "nav-menu"}>
                 {MenuData.map((item: MenuItem, index: number) => {

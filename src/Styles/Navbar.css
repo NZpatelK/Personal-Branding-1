@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-html{
-    scroll-behavior: smooth;
-}
 
 .NavBarItems{
     font-family: 'Quicksand', sans-serif;
@@ -13,9 +10,9 @@ html{
     padding: 0 30px;
     /* box-shadow: 0 5px 15px rgba(0,0,0,0.25); */
     backdrop-filter: blur(20px);
-    width: 100%;
+    width: 100vw;
     height: 80px;
-    position: fixed;
+    position: fixed !important;
     color: #ffffff;
     z-index: 99;
     top: 0;
@@ -62,7 +59,8 @@ html{
 }
 
 .menu-icons {
-    display: none;
+    
+    position: fixed;
 }
 
 .action{
@@ -72,7 +70,6 @@ html{
 @media screen and (max-width: 850px) {
     
     .NavBarItems{
-        position: fixed !important;
         z-index: 999999;
     }
 
@@ -117,7 +114,7 @@ html{
     }
 
     .menu-icons{
-        display: block;
+        display: unset;
         position: fixed;
         right: 100px;
         top: 30px;
