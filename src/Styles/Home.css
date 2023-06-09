@@ -66,7 +66,7 @@ body {
 }
 
 
-/* .content button {
+.content button {
     position: relative;
     background: #00E6EA;
     color: #fff;
@@ -81,7 +81,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: 0.5s;
-} */
+}
 
 
 .men {
@@ -131,7 +131,7 @@ body {
 @media screen and (min-height: 1000px) and (max-width: 1500px) {
 
     .content p {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .content h3 {
@@ -155,9 +155,9 @@ body {
 
     .section {
         flex-direction: column;
-        /* Change flex-direction to column */
+
         justify-content: flex-start;
-        /* Align items to the top */
+     
         height: auto;
     }
 
@@ -165,11 +165,11 @@ body {
         position: relative;
         margin-top: 10%;
         align-self: flex-start;
-        /* Align content to the top */
+     
         padding-left: 50px;
-        /* Adjust padding as needed */
+  
         width: 90%;
-        /* Take up the full width */
+   
     }
 
     .content p {
@@ -179,10 +179,11 @@ body {
     .men {
         position: relative;
         top: 15%;
+        right: 0%;
         max-width: auto;
         max-height: auto;
         margin-top: 50px;
-        /* Add margin to separate from .content */
+    
     }
 }
 
@@ -190,9 +191,9 @@ body {
 
     .section {
         flex-direction: column;
-        /* Change flex-direction to column */
+   
         justify-content: flex-start;
-        /* Align items to the top */
+
         height: auto;
     }
 
@@ -200,11 +201,11 @@ body {
         position: relative;
         top: 20%;
         align-self: flex-start;
-        /* Align content to the top */
+
         padding-left: 20px;
-        /* Adjust padding as needed */
+    
         width: 90%;
-        /* Take up the full width */
+      
     }
 
 
@@ -214,7 +215,7 @@ body {
         max-width: auto;
         max-height: auto;
         margin-top: 50px;
-        /* Add margin to separate from .content */
+       
     }
 }
 

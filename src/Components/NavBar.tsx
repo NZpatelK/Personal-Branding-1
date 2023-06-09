@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MenuData } from '../Data/MenuData';
 import '../Styles/Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,16 +14,17 @@ const NavBar: React.FC = () => {
     const [clicked, setClicked] = useState(false);
     const [selected, setSelected] = useState(0);
 
+
     const handleClick = (): void => {
         setClicked(!clicked);
     }
 
     return (
-        <nav className='NavBarItems'>
-            <h1 className= "logo">
+        <div className="NavBarItems">
+            <h1 className="logo">
                 Example Personal Branding
             </h1>
-            <div className='menu-icons' onClick={handleClick} style={{position: 'fixed'}}>
+            <div className='menu-icons' onClick={handleClick} style={{ position: 'fixed' }}>
                 <FontAwesomeIcon icon={clicked ? faTimes : faBars} />
             </div>
             <ul className={clicked ? "nav-menu active" : "nav-menu"}>
@@ -37,8 +38,10 @@ const NavBar: React.FC = () => {
                     );
                 })}
             </ul>
-        </nav>
+        </div>
     );
 };
 
 export default NavBar;
+
+

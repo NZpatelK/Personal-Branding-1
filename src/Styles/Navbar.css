@@ -17,7 +17,6 @@
     z-index: 99;
     top: 0;
     left: 0;
-    transform: none !important;
 }
 
 .logo {
@@ -38,7 +37,7 @@
     padding-right: 150px;
     color: #ffffff;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 .nav-links{
 
     text-decoration: none;
@@ -60,7 +59,7 @@
 }
 
 .menu-icons {
-    
+    display: none;
     position: fixed;
 }
 
@@ -71,7 +70,8 @@
 @media screen and (max-width: 850px) {
     
     .NavBarItems{
-        z-index: 999999;
+        z-index: 99;
+   
     }
 
     .nav-menu {

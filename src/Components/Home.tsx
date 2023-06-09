@@ -5,18 +5,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import { fadeIn, zoomIn } from '../utils/motion';
+import { fadeIn } from '../utils/motion';
 
 
 
 
 const Home: React.FC = () => {
 
+    const isMobile = window.innerWidth <= 1200;
+
+    const desktopContentMotion = fadeIn('right', 'tween', 0, 0.5);
+    const moibleContentMotion = fadeIn('up', 'tween', 0, 0.5);
+
+    const desktopImgMotion = fadeIn('left', 'tween', 0, 0.5);
+    const moibleImgMotion = fadeIn('up', 'tween', 0.5, 0.5);
+
     return (
         <div className='section' id="home">
             <div className="content">
                 <motion.div
-                    variants={fadeIn('right', 'tween', 0, 0.5)}
+                    variants={isMobile ? moibleContentMotion : desktopContentMotion }
                     initial="hidden"
                     whileInView="show">
                     <h3>Hey, I'm Karan Patel</h3>
@@ -58,9 +66,10 @@ const Home: React.FC = () => {
 
                 </div>
             </div>
-            <motion.div className='imgStyle' variants={zoomIn(0, 1)}
+            <motion.div className='imgStyle' variants={isMobile ? moibleImgMotion : desktopImgMotion }
                 initial="hidden"
-                whileInView="show" style={{pointerEvents: 'none'}}>
+                whileInView="show"
+                style={{pointerEvents: 'none'}}>
                 <img src={imgMen} alt="" className="men" />
             </motion.div>
         </div>
