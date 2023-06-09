@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-body {
+/* body {
     background-color: #000325;
 
-}
+} */
 
 .section {
     height: 100vh;
     width: 100vw;
-    top: 50px;
     display: flex;
     position: relative;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
     font-family: 'Quicksand', sans-serif;
     background-color: #000325;
 }
@@ -35,6 +35,7 @@ body {
 .content h2 {
     font-size: 3em;
     color: #fff;
+    text-align: left;
     font-weight: 700;
     transition: 0.5s;
 }
@@ -66,30 +67,15 @@ body {
 }
 
 
-.content button {
-    position: relative;
-    background: #00E6EA;
-    color: #fff;
-    border: none;
-    outline: none;
-    padding: 15px 35px;
-    font-size: 1.25em;
-    margin-top: 20px;
-    letter-spacing: 0.05em;
-    margin-right: 20px;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.5s;
+.imgStyle{
+    width: 60%;
+    max-width: 80rem;
 }
-
 
 .men {
     position: relative;
-    right: 0%;
-    bottom: 0%;
-    max-width: 100%;
-    max-height: auto;
+    width: 100%;
+    height: auto;
     animation: animateMen 5s ease-in-out infinite;
 }
 
@@ -128,7 +114,7 @@ body {
 
 }
 
-@media screen and (min-height: 1000px) and (max-width: 1500px) {
+@media screen and (min-height: 1000px) and (max-width: 1600px) {
 
     .content p {
         font-size: 18px;
@@ -241,6 +227,31 @@ body {
     .soicalIcon {
         display: none;
     }
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .content {
+        margin-top: 20%;
+    }
+
+    .content p {
+        font-size: 12px;
+        padding-right: 30px;
+    }
+
+    .content h3 {
+        font-size: 16px;
+    }
+
+    .content h2 {
+        font-size: 18px;
+        padding: 0;
+    }
+
+  
 
 
 }

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 .aboutMeSection {
     height: 100%;
-    width: 100%;
-    position: relative;
+    width: 100vw;
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     font-family: 'Quicksand', sans-serif;
@@ -12,24 +12,25 @@
 
 .imgLeft{
     position: relative;
-    padding: 50px 20px;
-    left: 20px;
+    padding: 50px 0px 50px 40px;
     height: auto;
     max-width: 30%;
 }
 
 
-.right .header{
+.content .header{
     text-align: left !important;
     font-size: 60px;
 }
 
-.right {
+.aboutMeContent {
+    overflow-x: hidden;
     position: relative;
     width: 100%;
     text-align: justify;
     padding-right: 100px;
-    left: 50px;
+    padding-left: 10px;
     font-size: 24px;
     color: #fff;
+    transition: .5s;
 }
