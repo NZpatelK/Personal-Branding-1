@@ -3,16 +3,30 @@ import '../Styles/MyWork.css'
 import animals from '../Data/animals.png';
 import airport from '../Data/airport.png';
 import foodSaver from '../Data/foodsaver.png';
+import { delay, motion } from 'framer-motion';
+import { fadeIn } from '../utils/motion';
 
 const MyWork: React.FC = () => {
+    const isMobile = window.innerWidth <= 1140;
+
+    const DesktopflipContainer = fadeIn('up', 'tween', 0.5, 0.5);
+    const mobileflipMotion= fadeIn('up', 'tween', 0.5, 0.5);
+
+    const desktopHeaderMotion = fadeIn('up', 'tween', 0, 0.5);
 
 
     return (
         <div className="flipcard" id='myWork'>
-            <div className="test123">
-                <h1> My project </h1>
-                <div className="flipContainer">
-                    <div className="wrapper">
+            <div className="flipPage">
+                <motion.h1 variants={desktopHeaderMotion}
+                    initial="hidden"
+                    whileInView="show"> My project </motion.h1>
+                <motion.div className="flipContainer"  variants={isMobile ? undefined : DesktopflipContainer }
+                    initial="hidden"
+                    whileInView="show">
+                    <motion.div className="wrapper" variants={isMobile ? mobileflipMotion : undefined} 
+                    initial="hidden"
+                    whileInView={"show"}>
                         <div className="single-card">
                             <div className="front">
                                 <img src={animals} alt="" className='projImg' />
@@ -31,8 +45,10 @@ const MyWork: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="wrapper">
+                    </motion.div>
+                    <motion.div className="wrapper" variants={isMobile ? mobileflipMotion : undefined} 
+                    initial="hidden"
+                    whileInView={"show"}>
                         <div className="single-card">
                             <div className="front">
                                 <img src={airport} alt="" className='projImg' />
@@ -50,8 +66,10 @@ const MyWork: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="wrapper">
+                    </motion.div>
+                    <motion.div className="wrapper" variants={isMobile ? mobileflipMotion : undefined} 
+                    initial="hidden"
+                    whileInView={"show"}>
                         <div className="single-card">
                             <div className="front">
                                 <img src={foodSaver} alt="" className='projImg' />
@@ -71,8 +89,8 @@ const MyWork: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </div>
     );
