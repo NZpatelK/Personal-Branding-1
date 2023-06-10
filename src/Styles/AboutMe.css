@@ -18,9 +18,9 @@
 }
 
 
-.content .header{
+.aboutMeSection .header{
     text-align: left !important;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .aboutMeContent {
@@ -28,9 +28,41 @@
     position: relative;
     width: 100%;
     text-align: justify;
-    padding-right: 100px;
-    padding-left: 10px;
+    padding-right: 80px;
+    padding-left: 30px;
     font-size: 24px;
     color: #fff;
     transition: .5s;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .aboutMeSection {
+        flex-direction: column;
+
+        /* justify-content: flex-start; */
+     
+        height: auto;
+        padding: 100px 0;
+        width: 100vw;
+    }
+
+    .aboutMeSection .imgLeft {
+        display: none;
+    }
+
+    .aboutMeContent{
+        padding: 0;
+    }
+
+    .aboutMeSection .aboutMeContent .header {
+        padding-left: 40px;
+        font-size: 30px;
+    }
+
+    .aboutMeSection .aboutMeContent p{
+        font-size: 18px;
+        padding: 0 40px
+    }
+    
 }
