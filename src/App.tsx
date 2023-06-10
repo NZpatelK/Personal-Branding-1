@@ -7,6 +7,7 @@ import Section4 from './Components/Section4';
 import Home from './Components/Home';
 import AboutMe from './Components/AboutMe';
 import 'aos/dist/aos.css'
+import MyWork from './Components/MyWork';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <NavBar/>
       <Home/>
       <AboutMe/>
-      <Section2 sectionNumber={2} />
+      <MyWork/>
       <Section3 sectionNumber={3} />
       <Section4 sectionNumber={4} />
 
