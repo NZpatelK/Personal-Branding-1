@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* body {
-    background-color: #000325;
-
-} */
-
 .section {
     height: 100vh;
     width: 100vw;
@@ -41,11 +36,11 @@
 }
 
 .content h2 span {
-    color: #00E6EA;
+    color: #06fbff;
 }
 
 .content p {
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: justify;
     color: #fff;
     margin-top: 20px;
@@ -61,7 +56,7 @@
 }
 
 .soicalIcon .sIcon {
-    color: #00E6EA;
+    color: #00f4f8;
     font-size: 30px;
     margin-right: 40px;
 }
@@ -76,6 +71,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    z-index: 20;
     animation: animateMen 5s ease-in-out infinite;
 }
 
@@ -92,50 +88,6 @@
     }
 }
 
-
-@media screen and (min-height: 1000px) {
-
-    .content p {
-        font-size: 28px;
-    }
-
-    .content h3 {
-        font-size: 50px;
-    }
-
-    .content h2 {
-        font-size: 80px;
-        padding: 0;
-    }
-
-    .soicalIcon .sIcon {
-        font-size: 40px;
-    }
-
-}
-
-@media screen and (min-height: 1000px) and (max-width: 1600px) {
-
-    .content p {
-        font-size: 18px;
-    }
-
-    .content h3 {
-        font-size: 30px;
-    }
-
-    .content h2 {
-        font-size: 50px;
-        padding: 0;
-    }
-
-    .soicalIcon .sIcon {
-        color: #00E6EA;
-        font-size: 20px;
-        margin-right: 40px;
-    }
-
-}
 
 @media screen and (max-width: 1200px) {
 
@@ -156,10 +108,6 @@
   
         width: 90%;
    
-    }
-
-    .content p {
-        font-size: 18px;
     }
 
     .men {
@@ -212,7 +160,7 @@
     }
 
     .content p {
-        font-size: 14px;
+        font-size: 0.9em;
     }
 
     .content h3 {
@@ -231,7 +179,7 @@
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 300px) {
 
     .content {
         margin-top: 20%;

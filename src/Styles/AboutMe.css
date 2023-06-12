@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Quicksand', sans-serif;
-    background-color: #040941;
+    background-color: #02062c;
 }
 
 .imgLeft{
@@ -20,7 +20,7 @@
 
 .aboutMeSection .header{
     text-align: left !important;
-    font-size: 40px;
+    font-size: 3em;
 }
 
 .aboutMeContent {
@@ -30,7 +30,7 @@
     text-align: justify;
     padding-right: 80px;
     padding-left: 30px;
-    font-size: 24px;
+    font-size: 1.2em;
     color: #fff;
     transition: .5s;
 }
@@ -38,10 +38,7 @@
 @media screen and (max-width: 1200px) {
 
     .aboutMeSection {
-        flex-direction: column;
-
-        /* justify-content: flex-start; */
-     
+        flex-direction: column;     
         height: auto;
         padding: 100px 0;
         width: 100vw;
@@ -61,8 +58,17 @@
     }
 
     .aboutMeSection .aboutMeContent p{
-        font-size: 18px;
+        font-size: 1.2em;
         padding: 0 40px
     }
     
+}
+
+@media screen and (max-width: 500px) {
+
+    .aboutMeSection .aboutMeContent p{
+        font-size: 0.9em;
+
+    }
+
 }

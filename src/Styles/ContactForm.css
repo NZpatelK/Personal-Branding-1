@@ -1,11 +1,11 @@
  .contactBody {
-     background: #040941;
+     background: #02062c;
      font-family: 'Quicksand', sans-serif;
      font-size: 14px;
      color: #000;
      margin: 0;
      width: 100vw;
-     padding: 50px 50px 200px 50px;
+     padding: 50px 0;
  }
 
  .contactBody h2 {
@@ -53,7 +53,7 @@
  }
 
  .contactBtn {
-     background-color: #007bff;
+     background-color: #06fbff;
      width: 20%;
      font-size: 20px;
      color: #fff;

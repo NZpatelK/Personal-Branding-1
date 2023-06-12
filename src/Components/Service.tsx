@@ -13,10 +13,6 @@ const Service: React.FC = () => {
                 <div className="ServiceContainer">
                     <Tilt>
                         <div className="ServiceCard">
-                            <div className="ServiceHeader">
-                                <h1>Basic</h1>
-                                <h2>$10</h2>
-                            </div>
                             <div className="ServiceContent">
                                 <h3>Basic Plan</h3>
                                 <ul>
@@ -31,10 +27,6 @@ const Service: React.FC = () => {
                     </Tilt>
                     <Tilt>
                         <div className="ServiceCard">
-                            <div className="ServiceHeader">
-                                <h1>Pro</h1>
-                                <h2>$20</h2>
-                            </div>
                             <div className="ServiceContent">
                                 <h3>Pro Plan</h3>
                                 <ul>
@@ -49,10 +41,6 @@ const Service: React.FC = () => {
                     </Tilt>
                     <Tilt>
                         <div className="ServiceCard">
-                            <div className="ServiceHeader">
-                                <h1>Premium</h1>
-                                <h2>$30</h2>
-                            </div>
                             <div className="ServiceContent">
                                 <h3>Premium Plan</h3>
                                 <ul>

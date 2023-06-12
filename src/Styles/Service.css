@@ -12,12 +12,12 @@
     justify-content: center;
     align-items: center;
     min-height: 100%;
-    background-color: #040941;
+    background-color: #02062c;
     padding: 50px 0px 100px 0;
     width: 100vw;
 }
 
-.ServiceBody .title{
+.ServiceBody .title {
     font-size: 4rem;
     position: relative;
     color: #fff;
@@ -26,7 +26,7 @@
 
 }
 
-.ServiceContainer{
+.ServiceContainer {
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -38,8 +38,7 @@
     z-index: 1;
 }
 
-.ServiceContainer .ServiceCard
-{
+.ServiceContainer .ServiceCard {
     position: relative;
     width: 280px;
     height: 400px;
@@ -56,42 +55,18 @@
     backdrop-filter: blur(5px);
 }
 
-.ServiceContainer .ServiceCard .ServiceHeader {
-    position: absolute;
-    text-align: center;
-    top: 0;
-    font-size: 2rem;
-    color: rgb(255, 255, 255);
-    pointer-events: none;
-    transition: 0.5s;
-}
-
-.ServiceContainer .ServiceCard .ServiceHeader h2 {
-    padding: 0;
-    margin: 0;
-    font-size: 6rem;
-}
 
 .ServiceContainer .ServiceCard .ServiceContent {
     padding: 20px;
     text-align: center;
-    transform: translateY(100px);
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s;
 }
 
-.ServiceContainer .ServiceCard:hover  .ServiceContent {
-    transform: translateY(0px);
-    opacity: 1;
-}
 
-.ServiceContainer .ServiceCard:hover  .ServiceHeader {
-    transform: translateY(-200px);
-    scale: 1.5;
-    opacity: 0;
-}
 
-.ServiceContainer .ServiceCard .ServiceContent h3{
+
+.ServiceContainer .ServiceCard .ServiceContent h3 {
     font-size: 2em;
     color: #fff;
     z-index: 1;
@@ -101,9 +76,8 @@
 
 .ServiceContainer .ServiceCard .ServiceContent ul li {
     font-size: 1em;
-    margin: 20px 0;
+    margin: 30px 0;
     text-align: left;
     color: #fff;
     font-weight: 400;
 }
-

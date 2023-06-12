@@ -37,6 +37,7 @@ const AboutMe: React.FC = () => {
                     and achieve their professional goals.
                 </p>
             </motion.div>
+            <div className="ball2"></div>
         </div>
 
     );

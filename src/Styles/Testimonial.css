@@ -14,7 +14,7 @@
 .testimonialHeader{
     color:white;
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
     padding-top: 50px;
 }
 
@@ -31,7 +31,8 @@
   background: #d1ebff;
   overflow: hidden;
   box-shadow: 0 15px 50px  rgba(0,0,0,0.2);
-  filter: blur(4px);
+  filter: blur(3px);
+  border-radius: 10px;
 }
 
 .swiper-slide-active {
