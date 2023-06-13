@@ -1,31 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../Styles/AboutMe.css'
-import meOutline from '../Data/me.png'
-import { fadeIn } from '../utils/motion';
+import meOutline from '../Data/Image/me.png'
 import { motion } from 'framer-motion';
+import { setMotion } from '../utils/SetMotion';
 
 
 const AboutMe: React.FC = () => {
 
     const isMobile = window.innerWidth <= 1200;
 
-    const desktopContentMotion = fadeIn('down', 'tween', 0, 0.2);
-    const moibleContentMotion = fadeIn('up', 'tween', 0, 0.2);
-
-    const desktopImgMotion = fadeIn('up', 'tween', 0, 0.5);
-    const moibleImgMotion = fadeIn('up', 'tween', 0.5, 0.5);
-
 
     return (
-        <div className="aboutMeSection" id='aboutme'>
-            <motion.img variants={isMobile ? moibleImgMotion : desktopImgMotion}
+        
+        <section className="aboutMeSection" id='aboutme'>
+
+            {/* Profile Image */}
+            <motion.img variants={isMobile ? setMotion.mobileImgMotion : setMotion.desktopImgMotion}
                 initial="hidden"
                 whileInView="show"
                 style={{ pointerEvents: 'none' }}
                 src={meOutline} alt=""
-                className="imgLeft" />
+                className="profileImg" />
+
+            {/* About me Content */}
             <motion.div
-                variants={isMobile ? moibleContentMotion : desktopContentMotion}
+                variants={isMobile ? setMotion.mobileAboutMeMotion : setMotion.desktopAboutMetMotion}
                 initial="hidden"
                 whileInView="show" className="aboutMeContent" >
                 <h2 className="header">About Me</h2>
@@ -37,9 +36,7 @@ const AboutMe: React.FC = () => {
                     and achieve their professional goals.
                 </p>
             </motion.div>
-            <div className="ball2"></div>
-        </div>
-
+        </section>
     );
 };
 

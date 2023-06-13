@@ -10,7 +10,7 @@
     background-color: #02062c;
 }
 
-.imgLeft{
+.aboutMeSection .profileImg{
     position: relative;
     padding: 50px 0px 50px 40px;
     height: auto;
@@ -44,7 +44,7 @@
         width: 100vw;
     }
 
-    .aboutMeSection .imgLeft {
+    .aboutMeSection .profileImg {
         display: none;
     }
 
@@ -54,7 +54,7 @@
 
     .aboutMeSection .aboutMeContent .header {
         padding-left: 40px;
-        font-size: 30px;
+        font-size: 2.5em;
     }
 
     .aboutMeSection .aboutMeContent p{
@@ -67,7 +67,7 @@
 @media screen and (max-width: 500px) {
 
     .aboutMeSection .aboutMeContent p{
-        font-size: 0.9em;
+        font-size: 0.8em;
 
     }
 

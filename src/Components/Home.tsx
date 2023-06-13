@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Home.css';
-import imgMen from '../Data/Image/men.png';
+import imgProfile from '../Data/Image/men.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
@@ -21,6 +21,8 @@ const Home: React.FC = () => {
     //This is checking the screen for montion animation
     const isMobile = window.innerWidth <= 1200;
 
+    const roles = ["Brand Strategist", "Copywriter", "Social Media Manager", "Brand Coach", "SEO Specialist"];
+
     return (
         <section id="home">
             <div className="content">
@@ -30,10 +32,12 @@ const Home: React.FC = () => {
                     variants={isMobile ? setMotion.mobileContentMotion : setMotion.desktopContentMotion}
                     initial="hidden"
                     whileInView="show">
+
+                    {/* Header   */}
                     <h3>Hey, I'm Karan Patel</h3>
                     <h2>I am a <span id="text">
                         <Typewriter
-                            words={["Brand Strategist", "Copywriter", "Social Media Manager", "Brand Coach", "SEO Specialist"]}
+                            words={roles}
                             loop={true}
                             cursor
                             cursorStyle='|'
@@ -42,6 +46,8 @@ const Home: React.FC = () => {
                             delaySpeed={1000}
                         />
                     </span></h2>
+
+                    {/* Serivce provider Content */}
                     <p>
                         Welcome to Karan's Personal Branding Services.
                         We specialise in helping individuals unlock their true potential and stand out from the crowd.
@@ -71,7 +77,7 @@ const Home: React.FC = () => {
                 whileInView="show"
                 style={{ pointerEvents: 'none' }}>
 
-                <img src={imgMen} alt="" className="profileImg" />
+                <img src={imgProfile} alt="" className="profileImg" />
 
             </motion.div>
         </section>
