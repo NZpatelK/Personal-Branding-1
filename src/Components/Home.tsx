@@ -1,30 +1,33 @@
 import React from 'react';
 import '../Styles/Home.css';
-import imgMen from '../Data/men.png';
+import imgMen from '../Data/Image/men.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
+import { iconData } from '../Data/IconData';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { setMotion } from '../utils/SetMotion';
 
-
+interface IconData {
+    icon: IconProp,
+    motionDelay: number
+    url: string
+}
 
 
 const Home: React.FC = () => {
 
+    //This is checking the screen for montion animation
     const isMobile = window.innerWidth <= 1200;
 
-    const desktopContentMotion = fadeIn('down', 'tween', 0, 0.5);
-    const moibleContentMotion = fadeIn('up', 'tween', 0, 0.5);
-
-    const desktopImgMotion = fadeIn('up', 'tween', 0, 0.5);
-    const moibleImgMotion = fadeIn('up', 'tween', 0.5, 0.5);
-
     return (
-        <div className='section' id="home">
+        <section id="home">
             <div className="content">
+
+                {/* introduction Content */}
                 <motion.div
-                    variants={isMobile ? moibleContentMotion : desktopContentMotion }
+                    variants={isMobile ? setMotion.mobileContentMotion : setMotion.desktopContentMotion}
                     initial="hidden"
                     whileInView="show">
                     <h3>Hey, I'm Karan Patel</h3>
@@ -46,33 +49,32 @@ const Home: React.FC = () => {
                         Whether you're an entrepreneur, professional, or creative, our personalized approach and strategic insights will elevate your brand to new heights. Discover the power of personal branding and let us guide you on the path to success.
                     </p>
                 </motion.div>
-                <div className="soicalIcon">
 
-                    <motion.div  variants={fadeIn('up', 'tween', 0.25, 0.5)}
-                    initial="hidden"
-                    whileInView="show">
-                        <FontAwesomeIcon className='sIcon' icon={faFacebook} />
-                    </motion.div>
-                    <motion.div  variants={fadeIn('up', 'tween', 0.5, 0.5)}
-                    initial="hidden"
-                    whileInView="show">
-                        <FontAwesomeIcon className='sIcon' icon={faInstagram} />
-                    </motion.div>
-                    <motion.div  variants={fadeIn('up', 'tween', 0.75, 0.5)}
-                    initial="hidden"
-                    whileInView="show">
-                        <FontAwesomeIcon className='sIcon' icon={faLinkedin} />
-                    </motion.div>
+                {/* this social icon for navigate to specifc social media page */}
+                <div className="socialIcon">
 
+                    {iconData.map((item: IconData, index: number) => {
+                        return (
+                            <motion.div variants={fadeIn('up', 'tween', item.motionDelay, 0.5)}
+                                initial="hidden"
+                                whileInView="show">
+                                <FontAwesomeIcon className='sIcon' icon={item.icon} />
+                            </motion.div>
+                        );
+                    })};
                 </div>
             </div>
-            <motion.div className='imgStyle' variants={isMobile ? moibleImgMotion : desktopImgMotion }
+
+            {/* Profile Image  */}
+            <motion.div className='imgBx' variants={isMobile ? setMotion.mobileImgMotion : setMotion.desktopImgMotion}
                 initial="hidden"
                 whileInView="show"
-                style={{pointerEvents: 'none'}}>
-                <img src={imgMen} alt="" className="men" />
+                style={{ pointerEvents: 'none' }}>
+
+                <img src={imgMen} alt="" className="profileImg" />
+
             </motion.div>
-        </div>
+        </section>
     );
 };
 
