@@ -1,16 +1,28 @@
 import React from 'react';
 import '../Styles/Service.css'
 import Tilt from 'react-parallax-tilt';
+import { fadeIn } from '../utils/motion';
+import { motion } from 'framer-motion';
 
 
 
 const Service: React.FC = () => {
 
+    const DesktopflipContainer = fadeIn('up', 'tween', 0.5, 0.5);
+
+    const desktopHeaderMotion = fadeIn('up', 'tween', 0, 0.5);
+
     return (
         <div className="ServicePage" id='service'>
             <div className="ServiceBody">
-                <h1 className='title'>Service</h1>
-                <div className="ServiceContainer">
+                <motion.div variants={desktopHeaderMotion}
+                    initial="hidden"
+                    whileInView="show">
+                    <h1 className='title'>Service</h1>
+                </motion.div>
+                <motion.div className="ServiceContainer" variants={DesktopflipContainer}
+                    initial="hidden"
+                    whileInView="show">
                     <Tilt>
                         <div className="ServiceCard">
                             <div className="ServiceContent">
@@ -53,7 +65,7 @@ const Service: React.FC = () => {
                             </div>
                         </div>
                     </Tilt>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

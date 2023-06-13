@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import NavBar from './Components/NavBar';
-import Section4 from './Components/Section4';
 import Home from './Components/Home';
 import AboutMe from './Components/AboutMe';
 import 'aos/dist/aos.css'
