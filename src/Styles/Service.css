@@ -3,6 +3,9 @@
 .ServiceBody {
     justify-content: center;
     align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
     background-color: #02062c;
     padding: 50px 0 100px 0;
@@ -22,8 +25,8 @@
 .ServiceContainer {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 0 100px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* padding-left: 50px; */
     justify-content: center;
     align-items: center;
     max-width: 100%;

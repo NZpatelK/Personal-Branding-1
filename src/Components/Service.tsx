@@ -26,6 +26,7 @@ const Service: React.FC = () => {
                 initial="hidden"
                 whileInView="show">
 
+                {/* List of Service  */}
                 {ServiceData.map((item: serviceData, index) => {
                     return (
 
