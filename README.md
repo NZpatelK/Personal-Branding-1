@@ -13,3 +13,6 @@ By harnessing the power of React, I have been able to create an immersive user e
 As I continue to explore the endless possibilities of web development, I eagerly anticipate the challenges that lie ahead, knowing that each hurdle represents an opportunity for growth and innovation. Through unwavering dedication and an unquenchable thirst for knowledge, I am confident in my ability to carve a distinctive path in the ever-evolving landscape of website development.
 
 So, stay tuned for more captivating creations as I embark on this thrilling journey of crafting extraordinary landing pages that leave a lasting impression. The best is yet to come! ✨
+
+#### Click on the video icon to view the demonstration video of my application. 👀
+[<img src='https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/512/external-video-news-xnimrodx-lineal-gradient-xnimrodx.png' width='100'>](https://www.linkedin.com/posts/karan-h-patel_webdevelopment-personalbranding-reacttypescript-activity-7074150413893009410-ZZ2X?utm_source=share&utm_medium=member_desktop)
