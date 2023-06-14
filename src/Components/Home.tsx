@@ -29,7 +29,7 @@ const Home: React.FC = () => {
 
                 {/* introduction Content */}
                 <motion.div
-                    variants={isMobile ? setMotion.mobileContentMotion : setMotion.desktopContentMotion}
+                    variants={isMobile ? setMotion.FadeInUpMotion : setMotion.FadeInDownMotion}
                     initial="hidden"
                     whileInView="show">
 
@@ -72,7 +72,7 @@ const Home: React.FC = () => {
             </div>
 
             {/* Profile Image  */}
-            <motion.div className='imgBx' variants={isMobile ? setMotion.mobileImgMotion : setMotion.desktopImgMotion}
+            <motion.div className='imgBx' variants={isMobile ? setMotion.FadeInUpMotion : setMotion.FadeInUpMotion05s}
                 initial="hidden"
                 whileInView="show"
                 style={{ pointerEvents: 'none' }}>

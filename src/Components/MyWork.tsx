@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Styles/MyWork.css'
 import { motion } from 'framer-motion';
-import { fadeIn } from '../utils/motion';
 import { ProjectData } from '../Data/projectsData';
 import { setMotion } from '../utils/SetMotion';
 
@@ -18,27 +17,21 @@ interface projectsData {
 const MyWork: React.FC = () => {
     const isMobile = window.innerWidth <= 1140;
 
-    const DesktopflipContainer = fadeIn('up', 'tween', 0.5, 0.5);
-    const mobileflipMotion = fadeIn('up', 'tween', 0.5, 0.5);
-
-    const desktopHeaderMotion = fadeIn('up', 'tween', 0, 0.5);
-
-
     return (
         <section className="myProjectSection" id='myWork'>
 
             <div className="projectHeader">
-                <motion.h1 variants={desktopHeaderMotion}
+                <motion.h1 variants={setMotion.FadeInUpMotion}
                     initial="hidden"
                     whileInView="show"> My projects </motion.h1>
             </div>
 
-            <motion.div className="flipContainer" variants={isMobile ? undefined : DesktopflipContainer}
+            <motion.div className="projectContainer" variants={isMobile ? undefined : setMotion.FadeInUpMotion05s}
                 initial="hidden"
                 whileInView="show">
 
                 {ProjectData.map((item: projectsData, index: number) => {
-                    return (<motion.div className="wrapper" variants={isMobile ? mobileflipMotion : undefined}
+                    return (<motion.div className="wrapper" variants={isMobile ? setMotion.FadeInUpMotion05s : undefined}
                         initial="hidden"
                         whileInView={"show"}>
 

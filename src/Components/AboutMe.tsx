@@ -15,16 +15,17 @@ const AboutMe: React.FC = () => {
         <section className="aboutMeSection" id='aboutme'>
 
             {/* Profile Image */}
-            <motion.img variants={isMobile ? setMotion.mobileImgMotion : setMotion.desktopImgMotion}
+            <motion.img variants={isMobile ? setMotion.FadeInUpMotion05s : setMotion.FadeInUpMotion}
                 initial="hidden"
                 whileInView="show"
                 style={{ pointerEvents: 'none' }}
                 src={meOutline} alt=""
                 className="profileImg" />
+                
 
             {/* About me Content */}
             <motion.div
-                variants={isMobile ? setMotion.mobileAboutMeMotion : setMotion.desktopAboutMetMotion}
+                variants={isMobile ? setMotion.FadeInUp02Motion : setMotion.FadeInDown02tMotion}
                 initial="hidden"
                 whileInView="show" className="aboutMeContent" >
                 <h2 className="header">About Me</h2>
