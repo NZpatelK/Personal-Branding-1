@@ -1,20 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-.ServicePage {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-    font-family: 'Quicksand', sans-serif;
-}
-
 .ServiceBody {
     justify-content: center;
     align-items: center;
     min-height: 100%;
     background-color: #02062c;
-    padding: 50px 0px 100px 0;
+    padding: 50px 0 100px 0;
     width: 100vw;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .ServiceBody .title {

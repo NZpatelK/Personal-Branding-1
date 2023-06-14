@@ -18,7 +18,6 @@ function App() {
       <MyWork/>
       <Service/>
       <Testimonial/>
-      <div className="ball"></div>
       <ContactForm/>
 
     </div>
