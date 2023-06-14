@@ -1,37 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-.flipcard {
-  position: relative;
+.myProjectSection {
+  padding: 50px 0 200px 0;
   top: 0;
   left: 0;
   height: auto;
-  width: 100vw;
-  align-items: center;
+  width:  100vw;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: 'Quicksand', sans-serif;
   background-color: #000325;
 }
 
-.flipPage {
-  padding: 50px 50px 200px 50px;
-  justify-content: center;
-  align-items: center;
+.myProjectSection .projectHeader {
   position: relative;
-}
-
-.flipcard h1 {
-  position: relative;
+  top: 0;
+  left: 0; 
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   font-size: 4rem;
   color: #fff;
 }
 
 .flipContainer {
   position: relative;
+  height: 100%;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   justify-content: center;
   align-items: center;
   z-index: 0;

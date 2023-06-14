@@ -11,7 +11,7 @@ export const MenuData = [
         icon: "#"
     },
     {
-        title: "My Work/ Project",
+        title: "My Projects",
         url: "#myWork",
         cName: "nav-links",
         icon: "#"
