@@ -15,4 +15,4 @@ As I continue to explore the endless possibilities of web development, I eagerly
 So, stay tuned for more captivating creations as I embark on this thrilling journey of crafting extraordinary landing pages that leave a lasting impression. The best is yet to come! ✨
 
 #### Click on the video icon to view the demonstration video of my application. 👀
-[<img src='https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/512/external-video-news-xnimrodx-lineal-gradient-xnimrodx.png' width='100'>](https://www.linkedin.com/posts/karan-h-patel_webdevelopment-personalbranding-reacttypescript-activity-7074150413893009410-ZZ2X?utm_source=share&utm_medium=member_desktop)
+https://nzpatelk.github.io/Personal-Branding-1/
