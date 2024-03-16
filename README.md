@@ -14,5 +14,4 @@ As I continue to explore the endless possibilities of web development, I eagerly
 
 So, stay tuned for more captivating creations as I embark on this thrilling journey of crafting extraordinary landing pages that leave a lasting impression. The best is yet to come! ✨
 
-#### Click on the video icon to view the demonstration video of my application. 👀
-https://nzpatelk.github.io/Personal-Branding-1/
+#### Preview View: https://nzpatelk.github.io/Personal-Branding-1/
